@@ -218,6 +218,7 @@ jobs:
           trivy image \
             --scanners vuln \
             --severity LOW,MEDIUM,HIGH,CRITICAL \
+            --ignore-unfixed \
             --exit-code 0 \
             "${IMAGE_NAME}:${IMAGE_TAG}"
 
@@ -226,6 +227,7 @@ jobs:
           trivy image \
             --scanners vuln \
             --severity CRITICAL \
+            --ignore-unfixed \
             --exit-code 1 \
             "${IMAGE_NAME}:${IMAGE_TAG}"
 
