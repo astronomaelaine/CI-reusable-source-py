@@ -1,4 +1,4 @@
-ame: Reusable Go CI
+name: Reusable Go CI
 
 on:
   workflow_call:
